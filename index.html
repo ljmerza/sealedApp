@@ -16,7 +16,8 @@
     <!-- container for video -->
     <div class="container-fluid video-overlay">
       <div class="filter-video-overlay"></div>
-      <img src='images/hourglass-mobile.png' class='img-repsonsive' id='img-mobile'>
+      <div class="filter-image-overlay"></div>
+      <img src='images/hourglass-mobile.png' class='img-repsonsive' id='img-mobile' alt='mobile alternative static image'>
       <video autoplay loop class="embed-responsive-item">
         <source src="images/hourglass.mp4" type="video/mp4">
       </video>
@@ -27,20 +28,22 @@
       <!-- row for overlay icon image -->
       <div class="row">
         <div class="col-xs-2 col-xs-offset-5 text-center">
-          <img class="img-responsive text-center" src="images/icon.png">
+          <img class="img-responsive text-center sealed-image" src="images/icon.png">
         </div>
       </div>
+
       <!-- row for overlay text -->
       <div class="row">
-        <div class="col-xs-8 col-xs-offset-2 text-center text-color-white">
-          <h1>sealed</h1>
-          <p>Send time-delayed photos and videos.</p>
+        <div class="col-xs-12 text-center text-color-white">
+          <div class='sealed-name'>sealed</div>
+          <p class='sealed-tagline'>Send time-delayed photos and videos.</p>
         </div>
       </div>
+
       <!-- row for overlay app store image -->
-      <div class="row">
+      <div class="row row-apple-store">
         <div class="col-xs-4 col-xs-offset-4 text-center">
-          <img class="img-responsive" src='images/app-store.png'>
+          <a href=""><img class="img-responsive" src='images/app-store.png' alt='apple store link to sealed app'></a>
         </div>
       </div>
     </div> <!-- end of container for text overlay on video -->
@@ -50,7 +53,7 @@
 
 
     <!-- container for 4 cards and phone image -->
-    <div class="container">
+    <div class="container-fluid">
       <!-- header row -->
       <div class="row">
         <div class="col-xs 12 fg-coloring text-center"><h1>Anticipation great again.</h1></div>
@@ -61,48 +64,49 @@
         <!-- code for 2 left side cards -->
         <div class="col-md-5 col-xs-12 no-padd-margin">
           <!-- row for create card -->
-          <div class="row">
-            <div class="col-xs-12 how-card">
+          <div class="row no-padd-margin">
+            <div class="col-xs-12 how-card how-card-left">
               <div class="col-xs-9 no-padd-margin text-right">
                 <div class='how-header fg-coloring'>Create</div>
-                <div class='how-subheader-left'>
+                <div class='how-subheader how-subheader-left'>
                   Create your message - photos, videos, text, or gift cards.
                 </div>
               </div>
-              <div class="col-xs-3"><img class='img-responsive' src="images/create.png" alt=""></div>
+              <div class="col-xs-3 card-image"><img class='img-responsive' src="images/create.png" alt="create icon"></div>
             </div>
           </div> <!-- end of row for create card -->
 
           <!-- row for set delay card -->
-          <div class="row">
-            <div class="col-xs-12 how-card">
+          <div class="row no-padd-margin">
+            <div class="col-xs-12 how-card how-card-left">
               <div class="col-xs-9 no-padd-margin text-right">
                 <div class='how-header fg-coloring'>Set time delay</div>
-                <div class='how-subheader-left'>
-                  A few hours or fifteen years, you choose how long your message stays locked
+                <div class='how-subheader how-subheader-left'>
+                  A few hours or fifteen years, you choose how long your message stays locked.
                 </div>
               </div>
-              <div class="col-xs-3"><img class='img-responsive' src="images/delay.png" alt=""></div>
+              <div class="col-xs-3 card-image"><img class='img-responsive' src="images/delay.png" alt="time delay icon"></div>
             </div>
           </div> <!-- end of row for set delay card -->
         </div> <!-- end of code for 2 left side cards -->
 
 
         <!-- middle phone image card-->
-        <div class="col-md-2 col-xs-12 no-padd-margin">
-          <img class='img-responsive img-example' src="https://placehold.it/300x500" alt="">
+        <div class="col-md-2 col-xs-12 no-padd-margin image-example-container">
+          <img id="over" src="images/spinner.gif" alt="animation showing how sealed app works" />
+          <img class='img-responsive img-example' src="images/iphone.png" alt="iPhone container for animation effect">
         </div>
 
 
         <!-- code for 2 right side cards -->
         <div class="col-md-5 col-xs-12 no-padd-margin">
           <!-- row for notified card -->
-          <div class="row">
-            <div class="col-xs-12 how-card">
-              <div class="col-xs-3"><img class='img-responsive' src="images/recieve.png" alt=""></div>
+          <div class="row no-padd-margin">
+            <div class="col-xs-12 how-card how-card-right">
+              <div class="col-xs-3 card-image"><img class='img-responsive' src="images/recieve.png" alt="notified icon"></div>
               <div class="col-xs-9 no-padd-margin">
                 <div class='how-header fg-coloring'>Recipient is notified</div>
-                <div class='how-subheader-right'>
+                <div class='how-subheader how-subheader-right'>
                   When you send your message, the recipient immediately gets a notification.
                 </div>
               </div>
@@ -110,19 +114,35 @@
           </div>
 
           <!-- row for wait card -->
-          <div class="row">
-            <div class="col-xs-12 how-card">
-              <div class="col-xs-3"><img class='img-responsive' src="images/wait.png" alt=""></div>
+          <div class="row no-padd-margin">
+            <div class="col-xs-12 how-card how-card-right">
+              <div class="col-xs-3 card-image"><img class='img-responsive' src="images/wait.png" alt="wait icon"></div>
               <div class="col-xs-9 no-padd-margin">
                 <div class='how-header fg-coloring'>The recipient waits</div>
-                <div class='how-subheader-right'>
+                <div class='how-subheader how-subheader-right'>
                   They know when it will unlock, but there's nothing to do but wait.
                 </div>
               </div>
             </div>
           </div> <!-- end of row for wait card -->
         </div> <!-- end of code for 2 right side cards -->
-      </div> <!-- end of row for all 4 cards and phone image -->
+
+        <!-- row for disappear card at bottom-->
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-md-offset-4">
+              <div class="row">
+                <div class="col-md-4 col-md-offset-4 how-card-bottom">
+                  <img class='img-responsive img-diss' src="images/disappear.png" alt="wait icon">
+                </div>
+              </div>
+              <div class='how-header fg-coloring text-center'>Disappearing optional</div>
+              <div class='how-subheader text-center'>
+                Your message can stick around forever or disappear after opening. Your choice.
+              </div>
+            </div>
+          </div>
+      </div> <!-- end of row for all 5 cards and phone image -->
+
       <!-- bottom of container spacing -->
       <div class="bottom-of-container"></div>
     </div> <!-- end of container for 4 cards and phone image -->
@@ -136,7 +156,7 @@
         <div class="col-xs-12 text-center"><h1>With Sealed you can defy time.</h1></div>
       </div>
       <div class="row">
-        <h3 class="col-xs-6 col-xs-offset-3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
+        <h3 class="col-md-6 col-md-offset-3 col-xs-12 text-center reason-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
       </div>
       <div class="bottom-of-container"></div>
     </div> <!-- end of container for reasons to use -->
@@ -146,24 +166,26 @@
 
 
     <!-- container for signing up -->
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 fg-coloring text-center"><h1>Give your friends something to look forward to.</h1></div>
+        <div class="col-xs-12 fg-coloring text-center"><h1>Give your friends<br>something to look forward to.</h1></div>
       </div>
       <div class="row">
-        <h3 class="col-xs-6 col-xs-offset-3 text-center">Whether you’re sending a birthday message a week in advance or storing away a moment from your first day of college, our hope is that Sealed provides a fun new way for you to connect with your friends, family, and with yourself.</h3>
+        <h3 class="col-md-6 col-md-offset-3 col-xs-12 text-center signup-text">Whether you’re sending a birthday message a week in advance or storing away a moment from your first day of college, our hope is that Sealed provides a fun new way for you to connect with your friends, family, and with yourself.</h3>
       </div>
 
       <!-- row for email submit -->
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+      <div class="row row-form">
+        <div class="col-md-4 col-md-offset-4">
           <form method='POST'>
-            <div class="input-group">
-             <input type="text" class="form-control" placeholder='sign up to stay in the loop!'>
-             <span class="input-group-btn">
-                  <button class="btn btn-default" type="submit">Sign Up</button>
-             </span>
-          </div>
+            <div class="row">
+              <div class="col-xs-12 col-md-10 form-items">
+                <input type="text" class="form-control form-input" placeholder='stay in the loop!'>
+              </div>
+              <div class="col-xs-12 col-md-2  form-items">
+                <button class="btn btn-default form-button" type="submit">Sign Up</button>
+              </div>
+            </div>
           </form>
         </div>
       </div> <!-- end of row for email submit -->
@@ -176,11 +198,17 @@
 
 
     <!-- container for footer image-->
-    <div class="container-fluid container-footer">
-      <img src='images/hourglass-mobile.png' class='img-repsonsive img-footer'>
+    <div class="container-fluid container-footer no-padd-margin">
+      <div class="row">
+        <div class="col-xs-12 no-padd-margin">
+          <a href="">
+            <img class='img-responsive' id="footer-image-over" src="images/app-store.png" alt="apple store link to sealed app" />
+          </a>
+          <img class='img-responsive img-example-footer' src="images/hourglass-mobile.png" alt="hourglass mobile static image">
+        </div>
+      </div>
     </div>
-
-    <!-- container for footer text overlay-->
+        <!-- container for footer text overlay-->
 
 
 

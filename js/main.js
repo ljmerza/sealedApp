@@ -34,3 +34,7 @@ if (isMobile.apple.phone || isMobile.android.phone || isMobile.windows.device
       })
     }
   }
+
+  $(window).load(function(){
+    $('body').show()
+  })
